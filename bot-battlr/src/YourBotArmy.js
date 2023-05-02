@@ -8,8 +8,13 @@ const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
   }
 
   const handleBotCardClick = (bot) => {
+    releaseBot(bot);
+  }
+
+  const handleDischargeClick = (bot) => {
     dischargeBot(bot);
   }
+
 
   return (
     <section>
@@ -25,6 +30,7 @@ const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
             <p>Health: {bot.health}</p>
             <p className='p2'>Damage: {bot.damage}</p>
             <p>Armor: {bot.armor}</p>
+            <button onClick={() => handleDischargeClick(bot)}>Discharge</button>
             
           </div>
         ))}
