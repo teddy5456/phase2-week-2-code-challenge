@@ -11,11 +11,21 @@ const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
     releaseBot(bot);
   }
 
-  const handleDischargeClick = (bot) => {
-    dischargeBot(bot);
+  const handleDischargeClick = async (bot) => {
+    try {
+      await fetch(`http://localhost:8001/bots/${bot.id}`, {
+        method: 'DELETE'
+      });
+  
+      const updatedArmy = army.filter(b => b.id !== bot.id);
+      dischargeBot(updatedArmy);
+      
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+    }
   }
-
-
+  
   return (
     <section classname='YourBotArmy'>
       <h2 className='titlee'>Your Bot Army</h2>
