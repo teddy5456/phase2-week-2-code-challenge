@@ -38,28 +38,23 @@
 }
 
 .mainTitle {
-    animation: shake 0.5s;
+    animation: shake 0.20s;
+    font-size: 36px;
     animation-iteration-count: infinite;
-    color: red;
-    text-shadow: yellow;
+    margin-left: 30px;
+    color: #3618e0;
+    display: inline-block;
+    background: linear-gradient(to right, rgb(173, 43, 43), rgb(108, 155, 209));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: slide 2s linear infinite;
   }
-  
-  @keyframes shake {
-    0% { transform: translate(0, 0); }
-    10% { transform: translate(-1px, 0); }
-    20% { transform: translate(1px, 0); }
-    30% { transform: translate(-1px, 0); }
-    40% { transform: translate(2px, 0); }
-    50% { transform: translate(-1px, 0); }
-    60% { transform: translate(1px, 0); }
-    70% { transform: translate(-1px, 0); }
-    80% { transform: translate(1px, 0); }
-    90% { transform: translate(-1px, 0); }
-    100% { transform: translate(0, 0); }
-  }
-  
+
 .mainTitle img {
-  max-width: 50px;
+  max-width: 70px;
   border-radius: 180px;
 }
+
 

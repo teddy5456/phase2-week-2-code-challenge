@@ -38,3 +38,28 @@
 .BotItem p {
   margin: 0;
 }
+
+.BotCollection h2 {
+  font-size: 28px;
+  margin-left:100px;
+  color: #3618e0;
+  display: inline-block;
+  background: linear-gradient(to right, red, blue);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: slide 2s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+
+

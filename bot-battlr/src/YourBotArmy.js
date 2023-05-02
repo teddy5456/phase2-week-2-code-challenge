@@ -17,9 +17,8 @@ const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
 
 
   return (
-    <section>
-      <h2 className='titlee'>
-        Your Bot Army</h2>
+    <section classname='YourBotArmy'>
+      <h2 className='titlee'>Your Bot Army</h2>
       <div className='BotArmy'>
         {army.length === 0 && <p>No bots enlisted. Enlist some!</p>}
         {army.map(bot => (

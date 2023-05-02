@@ -2,38 +2,59 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
-    margin: 100px;
+    margin: 50px;
+    border-radius: 15px;
+    border: 2px solid red;
+    
+    animation: border-pulse 2s infinite;
   }
+  
+  @keyframes border-pulse {
+    0% {
+      border-width: 2px;
+    }
+    50% {
+      border-width: 4px;
+      border-color: #3618e0;
+    }
+    100% {
+      border-width: 2px;
+    }
+  }
+   
+   
+  
 
   .p2 {
-    color: red;
+    color: rgba(241, 8, 8, 0.973);
     font-size: 20px;
   }
 
   .BotItem2:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
-    color: red;
+    color: rgb(241, 12, 12);
     text-shadow: yellow;
   }
   
   @keyframes shake {
     0% { transform: translate(0, 0); }
-    10% { transform: translate(-2px, 0); }
-    20% { transform: translate(2px, 0); }
+    10% { transform: translate(-3px, 0); }
+    20% { transform: translate(3px, 0); }
     30% { transform: translate(-3px, 0); }
-    40% { transform: translate(4px, 0); }
-    50% { transform: translate(-2px, 0); }
-    60% { transform: translate(2px, 0); }
-    70% { transform: translate(-2px, 0); }
+    40% { transform: translate(3px, 0); }
+    50% { transform: translate(-3px, 0); }
+    60% { transform: translate(3px, 0); }
+    70% { transform: translate(-3px, 0); }
     80% { transform: translate(2px, 0); }
-    90% { transform: translate(-2px, 0); }
+    90% { transform: translate(-3px, 0); }
     100% { transform: translate(0, 0); }
   }
   
 
 
   .BotItem2 {
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +102,27 @@
     background-color: #8e0000;
   }
   
-  .titlee img{
-    border-radius: 180px;
-    max-width: 40px;
+  .titlee {
+    font-size: 28px;
+    margin-left:100px;
+    color: #3618e0;
+    display: inline-block;
+    background: linear-gradient(to right, red, blue);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: slide 2s linear infinite;
   }
+  
+  @keyframes slide {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+  
+
+  
