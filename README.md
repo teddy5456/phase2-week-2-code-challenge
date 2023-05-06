@@ -15,6 +15,7 @@ To install and run the application, follow these steps:
 2. Install the dependencies by running **`npm install`**.
 3. Start the server by running **`npm start`**.
 4. Open **`http://localhost:3000`** in your browser.
+5. Run the json server in a different window. If it does not run in **`http://localhost:8001`** then run **`json-server --watch db.json --host localhost --port 8001`**
 
 ## **Usage**
 
