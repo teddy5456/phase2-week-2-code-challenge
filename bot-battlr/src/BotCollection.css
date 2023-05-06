@@ -7,8 +7,9 @@
 .BotItem {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  margin: 10px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -62,4 +63,14 @@
 }
 
 
+  .catchphrase {
+    color: rgb(17, 5, 5);
+    font-size: 13px;
+    border: none;
+    border-top: 1px solid black;
+    word-wrap: break-word;
+    width: 260px;
+    background-color: #eef8ee;
+    margin-bottom: 0%;
+  }
 

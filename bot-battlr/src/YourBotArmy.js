@@ -3,10 +3,7 @@ import './YourBotArmy.css';
 
 const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
 
-  const handleReleaseClick = (bot) => {
-    releaseBot(bot);
-  }
-
+  
   const handleBotCardClick = (bot) => {
     releaseBot(bot);
   }
@@ -33,13 +30,14 @@ const YourBotArmy = ({ army, releaseBot, dischargeBot }) => {
         {army.length === 0 && <p>No bots enlisted. Enlist some!</p>}
         {army.map(bot => (
           <div key={bot.id} className='BotItem2' onClick={() => handleBotCardClick(bot)}>
+             <button onClick={() => handleDischargeClick(bot)}>X</button>
             <img src={bot.avatar_url} alt={bot.name} />
             <h3>{bot.name}</h3>
             <p>Class: {bot.bot_class}</p>
             <p>Health: {bot.health}</p>
             <p className='p2'>Damage: {bot.damage}</p>
             <p>Armor: {bot.armor}</p>
-            <button onClick={() => handleDischargeClick(bot)}>Discharge</button>
+           
             
           </div>
         ))}
